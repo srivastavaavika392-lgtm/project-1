@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-Trust Biometric Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Abstract Mesh Background -->
+    <div class="mesh-background"></div>
+
+    <!-- Splash Screen: Biometric Scan -->
+    <div id="splash-screen" class="screen full-center">
+        <div class="scanner-container">
+            <div class="fingerprint-icon">
+                <!-- Circular/abstract thumb icon representation -->
+                <svg viewBox="0 0 24 24" fill="none" class="fp-svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="none" fill="#1e1e1e"/>
+                    <path d="M15.5 13a3.5 3.5 0 0 0-7 0" />
+                    <path d="M8.5 10a7 7 0 0 1 7 0" />
+                    <path d="M5.5 13.5a10.5 10.5 0 0 1 13 0" />
+                    <path d="M12 18V6" />
+                </svg>
+            </div>
+            <!-- Laser scanning line -->
+            <div class="scan-laser"></div>
+        </div>
+        <h1 class="scan-text">Authenticating...</h1>
+        <p class="scan-subtext">Zero-Trust Protocol Active</p>
+    </div>
+
+    <!-- Main Dashboard UI -->
+    <div id="main-dashboard" class="screen hidden">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="user-info">
+                   <h1 class="greeting">Vault Access Granted</h1>
+                   <p class="status-indicator">Connection Secure</p>
+                </div>
+                <div class="avatar-placeholder"></div>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Encrypted File Storage Widget -->
+            <section class="widget" id="file-storage">
+                <div class="widget-header">
+                    <h2>Encrypted Storage</h2>
+                    <span class="badge">97% Protected</span>
+                </div>
+                <div class="widget-body grid-layout">
+                    <div class="storage-item">
+                        <div class="item-icon folder-icon"></div>
+                        <div class="item-details">
+                            <span class="item-name">Quantum_Keys.dat</span>
+                            <span class="item-size">14.2 MB</span>
+                        </div>
+                    </div>
+                    <div class="storage-item">
+                        <div class="item-icon doc-icon"></div>
+                        <div class="item-details">
+                            <span class="item-name">Project_Onyx_Brief.pdf</span>
+                            <span class="item-size">241 KB</span>
+                        </div>
+                    </div>
+                     <div class="storage-item">
+                        <div class="item-icon vault-icon"></div>
+                        <div class="item-details">
+                            <span class="item-name">Seed_Phrases.env</span>
+                            <span class="item-size">AES-256</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MFA Status Widget -->
+            <section class="widget" id="mfa-status">
+                <div class="widget-header">
+                    <h2>MFA Status</h2>
+                </div>
+                <div class="widget-body flex-col">
+                    <div class="status-row">
+                        <span class="status-label">Biometric (Retina)</span>
+                        <div class="status-pill active">Verified</div>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">Hardware Token</span>
+                        <div class="status-pill active">Connected</div>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">Geolocation</span>
+                        <div class="status-pill warning">Masked</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hardware Security Key Link -->
+            <section class="widget" id="hw-key-link">
+                <div class="widget-header">
+                    <h2>Vault Configuration</h2>
+                </div>
+                <div class="widget-body center-content">
+                    <div class="key-graphic"></div>
+                    <button class="primary-btn">Manage Security Keys</button>
+                    <p class="micro-copy">Next key rotation in 12 days</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
